@@ -4,3 +4,115 @@
   padding: 2rem;
   text-align: center;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  background-color: rgba(217, 222, 236, 0.973);
+  padding: 10px;
+  gap: 10px;
+}
+
+.createPostCont{
+  width: 600px;
+  background-color: rgba(90, 90, 90, 0.973);
+  padding: 10px;
+  gap: 10px;
+}
+
+.article {
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.addElemContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.postElemCont {
+  display: block;
+}
+
+.createPostTypes__List {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.createPostTypes__List span {
+  font-size: 16px;
+  color: rgba(27, 60, 109, 0.726);
+  font-weight: bold;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.createPostTypes__List span:first-child {
+  color: black;
+}
+
+.createPostTypes__List span::after {
+  content: '|';
+  color: rgb(212, 212, 212);
+  margin-left: 10px;
+}
+
+.createPostTypes__List span:last-child::after {
+  content: '';
+}
+
+.createPostCont__close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: block;
+}
+
+.createPostCont__close:before, .createPostCont__close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.createPostCont__close:before {
+  transform: rotate(45deg);
+}
+.createPostCont__close:after {
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+.createPostTypes__textCont {
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.createPostTypes__textCont textarea {
+  width: 100%;
+  height: 60px;
+  resize: none;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.createPostTypes__btnCont {
+  padding: 10px;
+  text-align: right;
+  background-color: rgb(238, 238, 238);
+}
