@@ -32,7 +32,7 @@ const PostCard = ({ id }: Iid) => {
   }
 
   const handelerChangePost = () => {
-    console.log('change');
+    navigate('/posts/change/' + id);
   }
 
   return (
