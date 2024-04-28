@@ -57,7 +57,7 @@ const CreatePost = () => {
           <span>Ещё...</span>
         </div>
         <div className="createPostTypes__textCont">
-          <textarea onChange={changeHandler} value={postText}></textarea><br />
+          <textarea onChange={changeHandler} value={postText} autoFocus></textarea><br />
           <div className="errorDiv">{error}</div>
         </div>
         <div className="createPostTypes__btnCont">

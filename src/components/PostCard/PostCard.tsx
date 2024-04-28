@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Button from '../../ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
 
-interface Iid {
+export interface Iid {
   id: number;
 }
 
@@ -24,7 +24,16 @@ const PostCard = ({ id }: Iid) => {
     navigate('/');
   }
 
-  
+  const handelerDeletePost = () => {
+    fetch('http://localhost:7030/posts/' + id, {
+      method: 'DELETE'
+    }).then(() => navigate('/'))
+    .catch(e => 'При удалении возникла ошибка: ' + e)
+  }
+
+  const handelerChangePost = () => {
+    console.log('change');
+  }
 
   return (
     <article className='article'>
@@ -50,8 +59,8 @@ const PostCard = ({ id }: Iid) => {
           <div className={style["buttons"]}><a href="#">Нравится</a><a href="#">Комментировать</a></div>
         </div>
         <footer className={style["footer"]}>
-          <Button text='Изменить' color='blue' />
-          <Button text='Удалить' color='red' />
+          <Button text='Изменить' color='blue' handleClick={handelerChangePost} />
+          <Button text='Удалить' color='red' handleClick={handelerDeletePost} />
         </footer>
       </div>
     </article>
