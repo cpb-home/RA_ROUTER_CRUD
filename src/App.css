@@ -79,25 +79,22 @@
 
 .createPostCont__close:before, .createPostCont__close:after {
   position: absolute;
-  left: 15px;
+  left: 14px;
   content: ' ';
-  height: 33px;
+  height: 30px;
   width: 2px;
   background-color: #333;
 }
+.createPostCont__close:before:hover, .createPostCont__close:after:hover {
+  background-color: #b9b7b7;
+}
+
 .createPostCont__close:before {
   transform: rotate(45deg);
 }
 .createPostCont__close:after {
   transform: rotate(-45deg);
 }
-
-
-
-
-
-
-
 .createPostTypes__textCont {
   padding: 10px;
   margin-bottom: 12px;
@@ -115,4 +112,8 @@
   padding: 10px;
   text-align: right;
   background-color: rgb(238, 238, 238);
+}
+
+.errorDiv {
+  color: red;
 }

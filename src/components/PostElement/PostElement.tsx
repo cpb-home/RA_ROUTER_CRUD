@@ -1,7 +1,8 @@
 import style from './postElement.module.css'
 import { IPostElement } from '../../models/interfaces'
+import { Link } from 'react-router-dom'
 
-const PostElement = ({ content, created }: IPostElement) => {
+const PostElement = ({ content, created, id }: IPostElement) => {
   return (
     <article className='article'>
       <div className="postElemCont">
@@ -22,7 +23,7 @@ const PostElement = ({ content, created }: IPostElement) => {
           </div>
         </header>
         <div className={style["postContentCont"]}>
-          <h3>{content}</h3>
+          <Link to={`/posts/${id}`}><h3>{content}</h3></Link>
           <div className={style["buttons"]}><a href="#">Нравится</a><a href="#">Комментировать</a></div>
         </div>
         <footer className={style["footer"]}>
