@@ -3,6 +3,7 @@ import { IPostElement } from '../../models/interfaces';
 import { useEffect, useState } from 'react';
 import Button from '../../ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
+import { getDateDifference } from '../../models/interfaces';
 
 export interface Iid {
   id: number;
@@ -49,7 +50,7 @@ const PostCard = ({ id }: Iid) => {
                 Юзернейм ЮзерФэмилиНеймов
               </div>
               <div className={style["header__rank"]}>
-                Хозяин группы. <span>bcgbcvxv xcfvbcxvcv</span>
+                Хозяин группы. <span>{postInfo?getDateDifference(postInfo.created):''}</span>
               </div>
             </div>
           </div>

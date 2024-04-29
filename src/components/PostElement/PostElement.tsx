@@ -1,8 +1,10 @@
 import style from './postElement.module.css'
 import { IPostElement } from '../../models/interfaces'
 import { Link } from 'react-router-dom'
+import { getDateDifference } from '../../models/interfaces'
 
 const PostElement = ({ content, created, id }: IPostElement) => {
+
   return (
     <article className='article'>
       <div className="postElemCont">
@@ -17,7 +19,7 @@ const PostElement = ({ content, created, id }: IPostElement) => {
                 Юзернейм ЮзерФэмилиНеймов
               </div>
               <div className={style["header__rank"]}>
-                Хозяин группы. <span>{created}</span>
+                Хозяин группы. <span>{getDateDifference(created)}</span>
               </div>
             </div>
           </div>
